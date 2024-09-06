@@ -11,18 +11,16 @@ import Testimonials from './components/testimonials/Testimonials'
 
 const App = () => {
   return (
-    <>
+    <main className='flex'>
       <Sidebar />
-      <main className='main'>
-        <Home />
-        <About />
-        <Experience />
-        <Resume />
-        <Portfolio />
-        <Testimonials />
-        <Contact />
-      </main>
-    </>
+      <Home />
+      <About />
+      <Experience />
+      <Resume />
+      <Portfolio />
+      <Testimonials />
+      <Contact />
+    </main>
   )
 }
 

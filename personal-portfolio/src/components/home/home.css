@@ -13,6 +13,8 @@
 
 .home__img {
     margin-bottom: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .home__name {

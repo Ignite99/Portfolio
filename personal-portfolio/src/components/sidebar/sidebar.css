@@ -1,38 +1,60 @@
+@tailwind base;
+@tailwind components;
+
+@layer components {
+
+    .sidebar-icon {
+        @apply relative flex items-center justify-center 
+               h-16 w-16 mt-4 mb-4 mx-auto shadow-lg
+               bg-gray-800 text-green-500
+               hover:bg-green-600 hover:text-white
+               rounded-3xl hover:rounded-xl
+               transition-all duration-300 ease-linear
+               cursor-pointer;
+    }
+
+    .sidebar-hr {
+        @apply bg-gray-200 dark:bg-gray-800 
+        border border-gray-200 dark:border-gray-800 rounded-full
+        mx-2;
+    }
+}
+
+.tooltip-text {
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%) scale(0);
+    background-color: #111827;
+    color: #fff;
+    font-weight: var(--font-bold);
+    padding: 8px 20px;
+    border-radius: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    white-space: nowrap;
+    z-index: 10;
+    margin-left: 14px;
+    font-size: 21px;
+}
+
+.group:hover .tooltip-text {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+}
+
 .aside {
     position: fixed;
     left: 0;
     top: 0;
-    background: var(--body-color);
-    border-right: 1px solid rgba(0, 0, 0, 0.05);
-    padding: 2.5rem;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    background: #202225;
+    border-right: 3px solid rgba(0, 0, 0, 0.05);
     width: 110px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     z-index: 10;
-}
-
-.nav__list {
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
-}
-
-.nav__link {
-    font-size: 1.5rem;
-    color: var(--title-color);
-    font-weight: var(--font-bold);
-    transition: 0.3s;
-}
-
-.nav__link::hover {
-    color: hsl(43, 100%, 68%)
-}
-
-.copyright {
-    color: hsl(245, 15%, 65%);
-    font-size: var(--small-font-size);
-    transform: rotate(-180deg);
-    writing-mode: vertical-rl;
 }

@@ -10,6 +10,11 @@
     --body-color: hsl(258, 60%, 98%);
     --container-color: #fff;
 
+    /* tailwind */
+    --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+    --tw-bg-opacity: 1;
+
     /* font */
     --body-font: 'Rubik', sans-serif;
     --h1-font-size: 2.25rem;

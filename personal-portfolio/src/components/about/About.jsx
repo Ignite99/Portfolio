@@ -1,5 +1,6 @@
 import React from "react";
 import "./about.css";
+import cvFile from './Resume.pdf';
 import ImageAvatar from "../../assets/avatar-2.svg";
 import AboutBox from "./AboutBox";
 
@@ -17,7 +18,7 @@ const About = () => {
                             I am Goh Nicholas a fullstack developer from Singapore with extensive experience in both frontend and backend development.
                             I specialize in building scalable web applications, integrating complex backend systems, and delivering seamless user experiences.
                         </p>
-                        <a href="" className="btn">Download CV</a>
+                        <a href={cvFile} className="btn" download>Download CV</a>
                     </div>
 
                     {/* Need to update this at a later date */}
@@ -25,19 +26,23 @@ const About = () => {
                         <div className="skills__data">
                             <div className="skills__title">
                                 <h3 className="skills__name">Fullstack Development</h3>
-                                <span className="skills__number">80%</span>
+                                <div>
+                                    <span className="skills__number">Frontend: Angular, Electron, React</span>
+                                </div>
+                                <div>
+                                    <span className="skills__number">Backend: Python, Java, Golang, Ruby, PHP, C, C#, C++</span>
+                                </div>
+                                <div>
+                                    <span className="skills__number">DB: MySQL, Oracle, PostgreSQL, MongogDB, Redis, Firebase</span>
+                                </div>
+                                <div>
+                                    <span className="skills__number">Tools: Docker, Kubernetes, Nginx, Apache, Elastic</span>
+                                </div>
+                                <div>
+                                    <span className="skills__number">Cloud: AWS, Azure, Heroku</span>
+                                </div>
                             </div>
                         </div>
-                        <div className="skills__data">
-                            <div className="skills__title">
-                                <h3 className="skills__name">Fullstack Development</h3>
-                                <span className="skills__number">80%</span>
-                            </div>
-                            <div>
-                                <span className="skills__number">80%</span>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </div>

@@ -1,56 +1,38 @@
 import React from "react";
-import "./sidebar.css";
+import { BsFillLightningFill, BsGearFill } from 'react-icons/bs';
+import { RxQuestionMarkCircled } from "react-icons/rx";
+import { FaHome, FaPoo } from 'react-icons/fa';
+import "./sidebar.css"
 
-const Sidebar = () => {
+const SideBar = () => {
     return (
-        <aside className='aside'>
-            <nav className="nav">
-                <div className="mav__menu">
-                    <ul className="nav__list">
-                        <li className="nav__item">
-                            <a href="#home" className="nav__link">
-                                <i className="icon-home"></i>
-                            </a>
-                        </li>
+        <aside className="aside">
+            <div>
+                <a href="#home">
+                    <SideBarIcon icon={<FaHome size="38" />} text="Home " />
+                </a>
+                <Divider />
+                <a href="#about">
+                    <SideBarIcon icon={<RxQuestionMarkCircled size="39" />} text="About" />
+                </a>
+                <SideBarIcon icon={<BsFillLightningFill size="30" />} />
+                <SideBarIcon icon={<FaPoo size="30" />} />
+                <SideBarIcon icon={<BsGearFill size="32" />} />
 
-                        <li className="nav__item">
-                            <a href="#about" className="nav__link">
-                                <i className="icon-user-following"></i>
-                            </a>
-                        </li>
-
-                        <li className="nav__item">
-                            <a href="#experience" className="nav__link">
-                                <i className="icon-briefcase"></i>
-                            </a>
-                        </li>
-
-                        <li className="nav__item">
-                            <a href="#resume" className="nav__link">
-                                <i className="icon-graduation"></i>
-                            </a>
-                        </li>
-
-                        <li className="nav__item">
-                            <a href="#portfolio" className="nav__link">
-                                <i className="icon-layers"></i>
-                            </a>
-                        </li>
-
-                        <li className="nav__item">
-                            <a href="contact" className="nav__link">
-                                <i className="icon-bubble"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-
-            <div className="nav__footer">
-                {/* <span className="copyright"></span> */}
             </div>
         </aside>
-    )
-}
+    );
+};
 
-export default Sidebar
+const SideBarIcon = ({ icon, text = 'tooltip 💡' }) => (
+    <div className="sidebar-icon group relative flex items-center">
+        {icon}
+        <span className="tooltip-text group-hover:opacity-100 group-hover:scale-100">
+            {text}
+        </span>
+    </div>
+);
+
+const Divider = () => <hr className="sidebar-hr" />;
+
+export default SideBar;
