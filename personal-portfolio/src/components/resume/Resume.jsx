@@ -3,7 +3,9 @@ import "./resume.css";
 
 const Resume = () => {
     return (
-        <div>Resume</div>
+        <section className="resume container section" id="resume">
+
+        </section>
     )
 }
 
